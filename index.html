@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Area Co. Real Estate Associates — expert guidance for buyers, sellers and investors throughout South Florida." />
+  <title>Area Co. Real Estate Associates | South Florida Real Estate</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="Area Co. home">
+        <img src="assets/area-co-logo.jpg" alt="Area Co. Real Estate Associates" />
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav id="mainNav" class="main-nav" aria-label="Primary navigation">
+        <a href="#buy">Buy</a><a href="#sell">Sell</a><a href="#search">Search</a><a href="#communities">Communities</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions"><span class="lang">EN <span>|</span> ES</span><a class="btn btn-accent btn-small" href="tel:+17868633549">786-863-3549</a></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow light">South Florida Real Estate</p>
+          <h1>Your Next Chapter<br />Starts Here</h1>
+          <p class="hero-sub">Expert guidance. Local knowledge.<br />Real results in South Florida.</p>
+          <div class="hero-buttons"><a class="btn btn-accent" href="#search">Search Homes</a><a class="btn btn-ghost" href="#contact">Let’s Talk</a></div>
+        </div>
+
+        <form id="propertySearch" class="search-panel" aria-label="Property search">
+          <div class="search-tabs" role="tablist" aria-label="Search type">
+            <button type="button" class="tab active" data-tab="Buy">Buy</button><button type="button" class="tab" data-tab="Rent">Rent</button><button type="button" class="tab" data-tab="Sell">Sell</button><button type="button" class="tab" data-tab="Home Value">Home Value</button>
+          </div>
+          <div class="search-grid">
+            <label><span>Location</span><input type="text" name="location" placeholder="City, Neighborhood, or ZIP" /></label>
+            <label><span>Property Type</span><select name="type"><option>Any Type</option><option>Single Family</option><option>Condo</option><option>Townhome</option><option>Multi-Family</option></select></label>
+            <label><span>Price Min</span><select name="min"><option>No Min</option><option>$300,000</option><option>$500,000</option><option>$750,000</option><option>$1,000,000</option></select></label>
+            <label><span>Price Max</span><select name="max"><option>No Max</option><option>$750,000</option><option>$1,000,000</option><option>$1,500,000</option><option>$2,500,000+</option></select></label>
+            <label><span>Beds</span><select name="beds"><option>Any</option><option>2+</option><option>3+</option><option>4+</option><option>5+</option></select></label>
+            <label><span>Baths</span><select name="baths"><option>Any</option><option>2+</option><option>3+</option><option>4+</option></select></label>
+            <button class="btn btn-accent search-btn" type="submit">Search</button>
+          </div>
+          <p id="searchMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="quick-links" id="buy"><div class="container quick-grid">
+      <a href="#search" class="quick-item"><div class="icon">⌂</div><h3>Buy a Home</h3><p>Find your perfect property in South Florida.</p><span>Get Started →</span></a>
+      <a href="#sell" class="quick-item"><div class="icon">◇</div><h3>Sell Your Home</h3><p>Maximize your home's value with expert marketing.</p><span>Learn More →</span></a>
+      <a href="#sell" class="quick-item"><div class="icon">▥</div><h3>What’s My Home Worth?</h3><p>Get a free, no-obligation home valuation.</p><span>Find Out Today →</span></a>
+      <a href="#communities" class="quick-item"><div class="icon">⌖</div><h3>Explore Communities</h3><p>Discover the best neighborhoods in South Florida.</p><span>View Areas →</span></a>
+    </div></section>
+
+    <section class="section" id="search"><div class="container">
+      <div class="section-heading"><div><p class="eyebrow">Featured Properties</p><h2>Homes Worth Exploring</h2></div><a href="#contact" class="text-link">View All Listings →</a></div>
+      <div class="property-grid">
+        <article class="property-card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=82" alt="Modern South Florida luxury home" /><div class="property-body"><h3>$1,495,000</h3><p class="location">Doral, FL</p><p class="meta">5 Beds | 4 Baths | 3,220 Sq Ft</p></div></article>
+        <article class="property-card"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=82" alt="Waterfront condominium interior" /><div class="property-body"><h3>$895,000</h3><p class="location">Brickell, FL</p><p class="meta">2 Beds | 2 Baths | 1,256 Sq Ft</p></div></article>
+        <article class="property-card"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=82" alt="Contemporary suburban home" /><div class="property-body"><h3>$725,000</h3><p class="location">Homestead, FL</p><p class="meta">4 Beds | 3 Baths | 2,410 Sq Ft</p></div></article>
+        <article class="property-card"><img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=900&q=82" alt="Waterfront South Florida residence" /><div class="property-body"><h3>$1,250,000</h3><p class="location">Miami, FL</p><p class="meta">4 Beds | 3 Baths | 2,980 Sq Ft</p></div></article>
+      </div><p class="placeholder-note">Sample listings shown for design purposes. IDX/MLS feed can be connected later.</p>
+    </div></section>
+
+    <section class="broker-section" id="about">
+      <div class="broker-photo" role="img" aria-label="Professional real estate broker"></div>
+      <div class="broker-copy"><p class="eyebrow">Meet Your Broker</p><h2>Gabriel Gonzalez</h2><h3>Broker / Owner</h3><p>With deep South Florida market experience and a commitment to exceptional service, Gabriel helps buyers, sellers, and investors achieve their real estate goals with a clear, personalized strategy.</p><a class="btn btn-accent" href="#contact">Let’s Connect</a></div>
+      <div class="broker-values"><div><strong>Local Expertise</strong><span>Deep knowledge of South Florida markets.</span></div><div><strong>Personalized Service</strong><span>Strategies built around your goals.</span></div><div><strong>Proven Results</strong><span>Experience helping clients buy, sell, and invest.</span></div><div><strong>Trusted Guidance</strong><span>Clear communication from start to finish.</span></div></div>
+    </section>
+
+    <section class="section communities-section" id="communities"><div class="container"><p class="eyebrow">Explore South Florida</p><div class="section-heading"><div><h2>Communities We Serve</h2><p>From Miami to Doral, Homestead and beyond — find the right location for your lifestyle.</p></div></div><div class="community-grid"><a href="#contact" class="community-card miami"><span>Miami</span></a><a href="#contact" class="community-card doral"><span>Doral</span></a><a href="#contact" class="community-card homestead"><span>Homestead</span></a><a href="#contact" class="community-card kendall"><span>Kendall</span></a></div></div></section>
+
+    <section class="valuation" id="sell"><div class="container valuation-inner"><div><p class="eyebrow light">What’s My Home Worth?</p><h2>Get a Free Home Valuation</h2><p>Discover what your property could sell for in today’s South Florida market.</p></div><form id="valuationForm" class="valuation-form"><input type="text" name="address" placeholder="Property address" required /><input type="email" name="email" placeholder="Your email" required /><button class="btn btn-accent" type="submit">Get My Home Value</button><p id="valuationMessage" class="form-message light-message" aria-live="polite"></p></form></div></section>
+
+    <section class="section testimonials"><div class="container"><p class="eyebrow">Client Experience</p><h2>What Clients Say</h2><div class="testimonial-grid"><blockquote>“Professional, responsive, and knowledgeable from beginning to end.”<cite>— South Florida Buyer</cite></blockquote><blockquote>“Clear communication and strong guidance made the entire process much easier.”<cite>— Miami Homeowner</cite></blockquote><blockquote>“A personalized approach and real understanding of the local market.”<cite>— Real Estate Investor</cite></blockquote></div></div></section>
+
+    <section class="contact-section" id="contact"><div class="container contact-grid"><div><p class="eyebrow">Let’s Talk</p><h2>Ready for Your Next Move?</h2><p>Tell us what you’re looking to accomplish and we’ll help you map out the next step.</p><div class="contact-details"><a href="tel:+17868633549">786-863-3549</a><a href="mailto:gabriel@miamibroker.com">gabriel@miamibroker.com</a><span>South Florida</span></div></div><form id="contactForm" class="contact-form"><label><span>Name</span><input type="text" name="name" required /></label><label><span>Email</span><input type="email" name="email" required /></label><label><span>Phone</span><input type="tel" name="phone" /></label><label><span>I’m interested in</span><select name="interest"><option>Buying a home</option><option>Selling a home</option><option>Investing</option><option>Home valuation</option><option>General question</option></select></label><label class="full"><span>Message</span><textarea name="message" rows="5" placeholder="How can we help?"></textarea></label><button class="btn btn-accent" type="submit">Send Message</button><p id="contactMessage" class="form-message" aria-live="polite"></p></form></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><img src="assets/area-co-logo.jpg" alt="Area Co. Real Estate Associates" /><p>Serving buyers, sellers, and investors across South Florida.</p></div><div><h4>Quick Links</h4><a href="#buy">Buy</a><a href="#sell">Sell</a><a href="#communities">Communities</a><a href="#about">About</a><a href="#contact">Contact</a></div><div><h4>Contact</h4><a href="tel:+17868633549">786-863-3549</a><a href="mailto:gabriel@miamibroker.com">gabriel@miamibroker.com</a><span>South Florida, FL</span></div><div><h4>Area Co.</h4><p>Real Estate Associates</p><a class="btn btn-outline-light" href="#contact">Schedule a Consultation</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Area Co. Real Estate Associates. All rights reserved.</span><span>Information deemed reliable but not guaranteed. Equal Housing Opportunity.</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
