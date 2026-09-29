@@ -663,3 +663,25 @@ cite{display:block;font-size:.8rem;color:var(--muted);margin-top:16px;font-style
     gap:14px;
   }
 }
+
+/* v8 header additions only */
+.header-phone{
+  display:inline-flex !important;
+  white-space:nowrap;
+}
+
+
+/* v9 footer-only corrections */
+.footer-consult-btn{
+  background:linear-gradient(135deg,#b0148e,#6d2b82) !important;
+  color:#ffffff !important;
+  border:0 !important;
+  opacity:1 !important;
+  text-shadow:none !important;
+  box-shadow:0 8px 18px rgba(109,43,130,.20) !important;
+}
+.footer-consult-btn:visited,
+.footer-consult-btn:hover,
+.footer-consult-btn:focus{
+  color:#ffffff !important;
+}

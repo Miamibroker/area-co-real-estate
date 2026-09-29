@@ -54,3 +54,5 @@
   const year = document.querySelector('#year');
   if (year) year.textContent = new Date().getFullYear();
 })();
+
+// Placeholder Notary link: replace href="#" in index.html with the final Notary URL when ready.
