@@ -163,7 +163,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--magenta);box-shadow:0
   border-block:1px solid var(--line)
 }
 .broker-photo{
-  background:url("assets/gabriel-headshot.jpeg") center 25%/cover no-repeat;
+  background:url("assets/gabriel-headshot.jpeg") center 30%/cover no-repeat;
   min-height:405px
 }
 .broker-copy{padding:62px 48px}
