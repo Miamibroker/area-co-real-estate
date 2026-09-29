@@ -685,3 +685,98 @@ cite{display:block;font-size:.8rem;color:var(--muted);margin-top:16px;font-style
 .footer-consult-btn:focus{
   color:#ffffff !important;
 }
+
+
+/* --- v10: ONLY header phone + hero buttons + hero/search spacing --- */
+
+/* Keep the expanded desktop header on one row and make room for the phone CTA. */
+@media(min-width:1021px){
+  .nav-wrap{
+    width:min(1540px,calc(100% - 36px)) !important;
+    gap:20px !important;
+  }
+  .brand{
+    width:220px !important;
+  }
+  .brand img{
+    width:220px !important;
+  }
+  .main-nav{
+    gap:22px !important;
+    margin-left:auto !important;
+  }
+  .main-nav a{
+    font-size:.90rem !important;
+  }
+  .nav-actions{
+    display:flex !important;
+    align-items:center !important;
+    gap:14px !important;
+    margin-left:22px !important;
+    flex:0 0 auto !important;
+  }
+  .header-phone{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    min-width:168px !important;
+    height:48px !important;
+    padding:0 18px !important;
+    border-radius:8px !important;
+    background:linear-gradient(135deg,#b0148e,#6d2b82) !important;
+    color:#fff !important;
+    font-size:.94rem !important;
+    font-weight:700 !important;
+    white-space:nowrap !important;
+  }
+}
+
+/* Match the approved hero buttons. */
+.hero-buttons{
+  display:flex !important;
+  align-items:center !important;
+  gap:14px !important;
+  flex-wrap:wrap !important;
+}
+.hero-search-btn,
+.hero-talk-btn{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:50px !important;
+  padding:0 24px !important;
+  border-radius:8px !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+}
+.hero-search-btn{
+  background:linear-gradient(135deg,#b0148e,#8b248d) !important;
+  color:#fff !important;
+  border:1px solid transparent !important;
+}
+.hero-talk-btn{
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.78) !important;
+}
+
+/* Pull the property-search card closer to the hero CTA area. */
+.hero{
+  min-height:520px !important;
+}
+.hero-inner{
+  padding-top:58px !important;
+}
+.property-search-panel{
+  margin-top:22px !important;
+  transform:translateY(44px) !important;
+}
+.quick-links{
+  padding-top:74px !important;
+}
+
+@media(max-width:1020px){
+  .header-phone{
+    display:none !important;
+  }
+}

@@ -1,10 +1,11 @@
-# Area Co. Real Estate Associates — Revision 9
+# Area Co. Real Estate Associates — Revision 10
 
-Footer-only corrections to Revision 8.
+Surgical correction to Revision 9.
 
 Changed only:
-- Improved Schedule a Consultation button contrast/readability
-- Added Mortgage to footer Quick Links -> https://nationwideloansmiami.com/
-- Added Notary to footer Quick Links as href="#" placeholder for later update
+- Restored visible 786-863-3549 phone CTA in desktop header
+- Restored Search Homes as magenta filled hero button
+- Kept Let's Talk as outlined hero button
+- Reduced excess vertical distance between hero buttons and property-search panel
 
-Everything else remains unchanged from Revision 8.
+Everything else remains unchanged from Revision 9.
