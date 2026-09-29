@@ -24,6 +24,7 @@
         <a href="#buy">Buy</a>
         <a href="#sell">Sell</a>
         <a href="#search">Search</a>
+        <a href="#statewide">Communities</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -50,18 +51,20 @@
           </div>
         </div>
 
-        <form id="propertySearch" class="search-panel" aria-label="Property search">
-          <div class="search-tabs" role="tablist" aria-label="Search type">
-            <button type="button" class="tab active" data-tab="Buy">Buy</button>
-            <button type="button" class="tab" data-tab="Rent">Rent</button>
-            <button type="button" class="tab" data-tab="Sell">Sell</button>
-            <button type="button" class="tab" data-tab="Home Value">Home Value</button>
+        <form id="propertySearch" class="property-search-panel" aria-label="Property search">
+          <div class="property-search-tabs" role="tablist" aria-label="Search type">
+            <button type="button" class="property-tab active" data-tab="Buy">Buy</button>
+            <button type="button" class="property-tab" data-tab="Rent">Rent</button>
+            <button type="button" class="property-tab" data-tab="Sell">Sell</button>
+            <button type="button" class="property-tab" data-tab="Home Value">Home Value</button>
           </div>
-          <div class="search-grid">
-            <label>
+
+          <div class="property-search-fields">
+            <label class="field-location">
               <span>Location</span>
               <input type="text" name="location" placeholder="City, Neighborhood, or ZIP" />
             </label>
+
             <label>
               <span>Property Type</span>
               <select name="type">
@@ -72,6 +75,7 @@
                 <option>Multi-Family</option>
               </select>
             </label>
+
             <label>
               <span>Price Min</span>
               <select name="min">
@@ -82,6 +86,7 @@
                 <option>$1,000,000</option>
               </select>
             </label>
+
             <label>
               <span>Price Max</span>
               <select name="max">
@@ -92,61 +97,54 @@
                 <option>$2,500,000+</option>
               </select>
             </label>
+
             <label>
               <span>Beds</span>
               <select name="beds">
                 <option>Any</option><option>2+</option><option>3+</option><option>4+</option><option>5+</option>
               </select>
             </label>
+
             <label>
               <span>Baths</span>
               <select name="baths">
                 <option>Any</option><option>2+</option><option>3+</option><option>4+</option>
               </select>
             </label>
-            <button class="btn btn-accent search-btn" type="submit">Search</button>
+
+            <button class="property-search-button" type="submit">Search</button>
           </div>
+
           <p id="searchMessage" class="form-message" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
-    
     <section class="quick-links" id="buy">
       <div class="container quick-grid">
         <a href="#search" class="quick-item">
-          <svg class="quick-icon" viewBox="0 0 32 32" aria-hidden="true">
-            <path d="M5 14.5 16 5l11 9.5V27H19v-8h-6v8H5Z"/>
-          </svg>
+          <img class="quick-icon-img" src="assets/icons/home.svg" alt="" aria-hidden="true">
           <h3>Buy a Home</h3>
           <p>Find your perfect property in Florida.</p>
           <span>Get Started →</span>
         </a>
 
         <a href="#sell" class="quick-item">
-          <svg class="quick-icon" viewBox="0 0 32 32" aria-hidden="true">
-            <path d="M4 14 15 3h10l4 4v10L18 28 4 14Z"/>
-            <circle cx="22" cy="9" r="2"/>
-          </svg>
+          <img class="quick-icon-img" src="assets/icons/tag.svg" alt="" aria-hidden="true">
           <h3>Sell Your Home</h3>
           <p>Maximize your home's value with expert marketing.</p>
           <span>Learn More →</span>
         </a>
 
         <a href="#sell" class="quick-item">
-          <svg class="quick-icon" viewBox="0 0 32 32" aria-hidden="true">
-            <path d="M5 27V16h5v11M14 27V10h5v17M23 27V4h5v23M3 27h27"/>
-          </svg>
+          <img class="quick-icon-img" src="assets/icons/chart.svg" alt="" aria-hidden="true">
           <h3>What’s My Home Worth?</h3>
           <p>Get a free, no-obligation home valuation.</p>
           <span>Find Out Today →</span>
         </a>
 
         <a href="#statewide" class="quick-item">
-          <svg class="quick-icon" viewBox="0 0 32 32" aria-hidden="true">
-            <path d="M16 29s9-8.4 9-16a9 9 0 1 0-18 0c0 7.6 9 16 9 16Z"/>
-            <circle cx="16" cy="13" r="3.2"/>
-          </svg>
+          <img class="quick-icon-img" src="assets/icons/pin.svg" alt="" aria-hidden="true">
           <h3>Explore Florida</h3>
           <p>Serving buyers, sellers, and investors statewide.</p>
           <span>Learn More →</span>
@@ -304,7 +302,9 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="#top" class="footer-logo" aria-label="Area Co. home"><img src="assets/area-co-horizontal.png" alt="Área Co. Real Estate Associates"></a>
+        <a href="#top" class="footer-logo" aria-label="Area Co. home">
+          <img src="assets/area-co-horizontal.png" alt="Área Co. Real Estate Associates">
+        </a>
         <p>Serving buyers, sellers, and investors throughout Florida.</p>
       </div>
 
@@ -326,13 +326,20 @@
       <div class="footer-cta">
         <h4>Let’s Connect</h4>
         <p>Ready to buy, sell, or invest?</p>
-        <a class="btn btn-outline-light" href="#contact">Schedule a Consultation</a>
+        <a class="footer-consult-btn" href="#contact">Schedule a Consultation</a>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <span>© <span id="year"></span> Area Co. Real Estate Associates. All rights reserved.</span>
-      <span>Information deemed reliable but not guaranteed. Equal Housing Opportunity.</span>
+      <div class="footer-legal-left">
+        <span>© <span id="year"></span> Area Co. Real Estate Associates. All rights reserved.</span>
+      </div>
+
+      <div class="footer-legal-right">
+        <img class="eho-logo" src="assets/equal-housing-opportunity.svg" alt="Equal Housing Opportunity">
+        <span>Information deemed reliable but not guaranteed.</span>
+        <span>Equal Housing Opportunity.</span>
+      </div>
     </div>
   </footer>
 

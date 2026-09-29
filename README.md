@@ -1,26 +1,13 @@
-# Area Co. Real Estate Associates — Revision 3
+# Area Co. Real Estate Associates — Revision 7
 
-This revision fixes the issues from the previous version.
+Footer-only redesign from Revision 6.
 
-## Fixes included
-
-- Restored and corrected the compact property-search panel
-- Restored Buy / Rent / Sell / Home Value tabs
-- Restored field labels and magenta Search button
-- Reduced the oversized white gap below the search panel
-- Restored all four service icons
-- Service icons now match the approved magenta outline style:
-  - house
-  - price tag
-  - bar chart
-  - map pin
-- Replaced the recreated header logo with the official Area Co. horizontal logo
-- Replaced the recreated footer logo with the official Area Co. logo
-- Preserved the Inter typography and statewide Florida updates from Revision 2
-
-## Netlify
-
-Static site:
-- Build command: leave blank
-- Publish directory: `.`
-- Branch: `main`
+Changes:
+- Removed dark black footer background
+- Added light, polished off-white footer
+- Kept official Area Co horizontal logo
+- Improved spacing and column balance
+- Rebuilt Schedule a Consultation button in brand gradient
+- Added Equal Housing Opportunity logo/mark
+- Preserved all footer links and contact information
+- Rest of site intentionally unchanged
