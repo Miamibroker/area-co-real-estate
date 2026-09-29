@@ -1,30 +1,45 @@
-# Area Co. Real Estate Associates Website
+\
+# Area Co. Real Estate Associates — Revision 2
 
-Static, responsive website package for GitHub + Netlify deployment.
+Static responsive website package prepared for GitHub + Netlify.
+
+## Included changes
+
+- Entire site switched to Inter/system-ui typography
+- Cleaner horizontal Area Co. header branding
+- Brighter, less orange hero treatment
+- Improved hero/search-panel overlap
+- Replaced four service icons with consistent outlined icons
+- Added missing broker-section icons
+- Removed city/community photo cards
+- Added simple Florida statewide service statement
+- Updated service language to South, Central, and Northern Florida / statewide
+- Compact contact section
+- GABRIEL GONZALEZ displayed in capitals
+- Redesigned compact footer without boxed logo treatment
+- Removed Communities navigation link
 
 ## Files
-- `index.html` — full homepage
-- `styles.css` — responsive design and Area Co branding
-- `script.js` — mobile navigation and placeholder form/search behavior
-- `assets/area-co-logo.jpg` — supplied company logo
-- `netlify.toml` — Netlify settings
 
-## GitHub
-1. Create a repository such as `area-co-real-estate`.
-2. Upload all files and folders from this package.
-3. Commit to `main`.
+- `index.html`
+- `styles.css`
+- `script.js`
+- `assets/hero-miami.png`
+- `assets/area-co-original-logo.jpg` (reference/backup)
+- `netlify.toml`
+- `robots.txt`
 
-## Netlify
-1. Add new site → Import an existing project.
-2. Connect GitHub and select the repository.
-3. Build command: leave blank.
-4. Publish directory: `.`
-5. Deploy.
+## Deployment
+
+The project is static. No build command is required.
+
+Netlify:
+- Branch: `main`
+- Build command: leave blank
+- Publish directory: `.`
 
 ## Important
-The listing cards are sample listings for design purposes only. The search interface is prepared for future IDX/MLS integration but is not connected yet.
 
-The contact and valuation forms currently show a local confirmation message. They can be connected to Netlify Forms, a CRM, email service, or API endpoint.
-
-Phone: 786-863-3549
-Email: gabriel@miamibroker.com
+The featured listings are sample content for design purposes.
+Property search is not yet connected to IDX/MLS.
+The broker photo remains a placeholder until the final headshot is selected.
