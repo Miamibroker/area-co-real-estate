@@ -57,11 +57,8 @@ p{margin-top:0}
   backdrop-filter:blur(12px)
 }
 .nav-wrap{min-height:70px;display:flex;align-items:center;gap:26px}
-.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
-.brand-mark{width:38px;height:46px;display:block}
-.brand-copy{display:flex;flex-direction:column;line-height:1}
-.brand-copy strong{font-size:1.28rem;letter-spacing:.08em;font-weight:500}
-.brand-copy small{font-size:.56rem;letter-spacing:.06em;margin-top:5px;font-weight:500}
+.brand{display:flex;align-items:center;flex:0 0 auto;width:235px}
+.brand img{display:block;width:100%;height:52px;object-fit:contain;object-position:left center}
 .main-nav{display:flex;align-items:center;justify-content:center;gap:28px;margin-left:auto}
 .main-nav a{font-size:.9rem;font-weight:600}
 .main-nav a:hover{color:var(--magenta)}
@@ -70,12 +67,7 @@ p{margin-top:0}
 .menu-toggle{display:none;border:0;background:transparent;padding:7px}
 .menu-toggle span{display:block;width:24px;height:2px;background:#111;margin:5px 0}
 
-.hero{
-  position:relative;
-  min-height:620px;
-  overflow:visible;
-  color:#fff;
-}
+.hero{position:relative;min-height:560px;overflow:visible;color:#fff}
 .hero-image{
   position:absolute;
   inset:0;
@@ -88,42 +80,26 @@ p{margin-top:0}
   inset:0;
   background:linear-gradient(90deg,rgba(9,18,34,.40) 0%,rgba(9,18,34,.17) 42%,rgba(9,18,34,.02) 72%);
 }
-.hero-inner{padding:72px 0 0;position:relative;z-index:2}
+.hero-inner{padding:66px 0 0;position:relative;z-index:2}
 .hero-copy{max-width:610px}
 .hero-sub{font-size:clamp(1rem,1.7vw,1.22rem);margin:20px 0 28px;color:rgba(255,255,255,.95)}
 .hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
-.search-panel{
-  margin-top:52px;
-  transform:translateY(58px);
-  background:#fff;
-  color:var(--ink);
-  border-radius:18px;
-  box-shadow:0 14px 38px rgba(20,20,20,.13);
-  padding:0 26px 24px;
-}
-.search-tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);min-height:58px;align-items:end}
-.tab{border:0;background:transparent;padding:0 6px 15px;font-weight:600;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent}
+.search-panel{margin-top:36px;position:relative;top:54px;background:#fff;color:var(--ink);border-radius:18px;box-shadow:0 14px 38px rgba(20,20,20,.13);padding:0 26px 20px;min-height:0}
+.search-tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);height:48px;align-items:flex-end}
+.tab{border:0;background:transparent;padding:0 6px 12px;font-weight:600;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;font-size:.88rem}
 .tab.active{color:var(--ink);border-bottom-color:var(--magenta)}
-.search-grid{display:grid;grid-template-columns:1.55fr 1fr .8fr .8fr .65fr .65fr .9fr;gap:12px;padding-top:18px;align-items:end}
-.search-grid label span,.contact-form label span{display:block;font-size:.76rem;font-weight:700;margin-bottom:6px}
+.search-grid{display:grid;grid-template-columns:1.55fr 1fr .8fr .8fr .65fr .65fr .9fr;gap:12px;padding-top:14px;align-items:end}
+.search-grid label span,.contact-form label span{display:block;font-size:.74rem;font-weight:700;margin-bottom:5px}
 input,select,textarea{width:100%;border:1px solid #dcdde3;background:#fff;border-radius:7px;padding:11px 12px;outline:none}
 input:focus,select:focus,textarea:focus{border-color:var(--magenta);box-shadow:0 0 0 3px rgba(176,20,142,.10)}
 .search-btn{width:100%}
 .form-message{margin:8px 0 0;color:var(--muted);font-size:.84rem}
 
-.quick-links{padding:120px 0 60px;border-bottom:1px solid var(--line)}
+.quick-links{padding:92px 0 54px;border-bottom:1px solid var(--line)}
 .quick-grid{display:grid;grid-template-columns:repeat(4,1fr)}
 .quick-item{text-align:center;padding:0 28px;border-right:1px solid var(--line)}
 .quick-item:last-child{border-right:0}
-.quick-icon{
-  width:38px;height:38px;
-  margin:0 auto 12px;
-  fill:none;
-  stroke:var(--magenta);
-  stroke-width:2;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-}
+.quick-icon{width:42px;height:42px;margin:0 auto 10px;fill:none;stroke:var(--magenta);stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round;display:block}
 .quick-item h3{margin:0 0 8px;font-size:1.03rem}
 .quick-item p{color:var(--muted);font-size:.9rem;margin-bottom:8px}
 .quick-item span{color:var(--magenta);font-weight:700;font-size:.86rem}
@@ -211,11 +187,8 @@ cite{display:block;font-size:.8rem;color:var(--muted);margin-top:16px;font-style
 
 .site-footer{background:#101012;color:#fff;padding:42px 0 20px}
 .footer-grid{display:grid;grid-template-columns:1.5fr .75fr 1fr 1fr;gap:46px;align-items:start}
-.footer-logo{display:flex;align-items:center;gap:11px;width:max-content}
-.footer-brand-mark{width:42px;height:50px}
-.footer-logo>span{display:flex;flex-direction:column;line-height:1}
-.footer-logo strong{font-size:1.35rem;letter-spacing:.08em;font-weight:500}
-.footer-logo small{font-size:.55rem;letter-spacing:.06em;margin-top:5px;color:#fff}
+.footer-logo{display:block;width:255px}
+.footer-logo img{display:block;width:100%;height:auto;background:#fff;border-radius:6px;padding:4px}
 .footer-brand p{max-width:310px;color:#bfc0c7;margin-top:16px}
 .footer-grid h4{margin:3px 0 13px;font-size:.93rem}
 .footer-grid a,.footer-grid span,.footer-grid p{display:block;color:#d6d6db;margin:7px 0;font-size:.86rem}
@@ -246,8 +219,6 @@ cite{display:block;font-size:.8rem;color:var(--muted);margin-top:16px;font-style
 
 @media(max-width:720px){
   .container{width:min(100% - 28px,1180px)}
-  .brand-copy strong{font-size:1.05rem}
-  .brand-copy small{font-size:.5rem}
   .nav-actions .btn{display:none}
   .hero{min-height:590px}
   .hero-inner{padding-top:64px}
@@ -279,8 +250,10 @@ cite{display:block;font-size:.8rem;color:var(--muted);margin-top:16px;font-style
 
 @media(max-width:480px){
   h1{font-size:2.55rem}
-  .brand-mark{width:32px;height:40px}
   .search-grid{grid-template-columns:1fr}
   .search-grid label:first-child,.search-btn{grid-column:auto}
   .footer-grid{grid-template-columns:1fr}
 }
+
+@media(max-width:720px){.brand{width:190px}.brand img{height:46px}}
+@media(max-width:480px){.brand{width:165px}.brand img{height:42px}}
