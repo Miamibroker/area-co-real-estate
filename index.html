@@ -280,23 +280,157 @@
           </div>
         </div>
 
-        <form id="contactForm" class="contact-form">
-          <label><span>Name</span><input type="text" name="name" required /></label>
-          <label><span>Email</span><input type="email" name="email" required /></label>
-          <label><span>Phone</span><input type="tel" name="phone" /></label>
-          <label><span>I’m interested in</span>
-            <select name="interest">
-              <option>Buying a home</option>
-              <option>Selling a home</option>
-              <option>Investing</option>
-              <option>Home valuation</option>
-              <option>General question</option>
-            </select>
-          </label>
-          <label class="full"><span>Message</span><textarea name="message" rows="4" placeholder="How can we help?"></textarea></label>
-          <button class="btn btn-accent" type="submit">Send Message</button>
-          <p id="contactMessage" class="form-message" aria-live="polite"></p>
-        </form>
+        <form
+  id="contactForm"
+  class="contact-form"
+  name="real-estate-inquiry"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="real-estate-inquiry">
+
+  <input
+    type="hidden"
+    name="consent_version"
+    value="area-co-2026-10-21-v1"
+  >
+
+  <input
+    type="hidden"
+    name="consent_timestamp"
+    id="consentTimestamp"
+    value=""
+  >
+
+  <p style="display:none;">
+    <label>
+      Don’t fill this out:
+      <input name="bot-field">
+    </label>
+  </p>
+
+  <label>
+    <span>Name</span>
+    <input
+      type="text"
+      name="name"
+      autocomplete="name"
+      required
+    >
+  </label>
+
+  <label>
+    <span>Email</span>
+    <input
+      type="email"
+      name="email"
+      autocomplete="email"
+      required
+    >
+  </label>
+
+  <label>
+    <span>Phone</span>
+    <input
+      type="tel"
+      name="phone"
+      id="contactPhone"
+      autocomplete="tel"
+    >
+  </label>
+
+  <label>
+    <span>I’m interested in</span>
+    <select name="interest" required>
+      <option value="Buying a home">Buying a home</option>
+      <option value="Selling a home">Selling a home</option>
+      <option value="Investing">Investing</option>
+      <option value="Home valuation">Home valuation</option>
+      <option value="General question">General question</option>
+    </select>
+  </label>
+
+  <label class="full">
+    <span>Message</span>
+    <textarea
+      name="message"
+      rows="4"
+      placeholder="How can we help?"
+    ></textarea>
+  </label>
+
+  <!-- REQUIRED INQUIRY / PRIVACY ACKNOWLEDGMENT -->
+  <div class="full consent-row">
+    <label class="consent-label">
+      <input
+        type="checkbox"
+        name="consultation_acknowledgment"
+        id="consultationAck"
+        value="yes"
+        required
+      >
+
+      <span>
+        <strong>Inquiry acknowledgment (required).</strong>
+        I request Área Co. Real Estate Associates to contact me regarding
+        my real estate inquiry by phone and/or email. I acknowledge the
+        <a href="/privacy-policy/#privacy" target="_blank">
+          Privacy Policy
+        </a>
+        and
+        <a href="/privacy-policy/#terms" target="_blank">
+          Terms of Use
+        </a>.
+      </span>
+    </label>
+  </div>
+
+  <!-- OPTIONAL SMS CONSENT -->
+  <div class="full consent-row">
+    <label class="consent-label">
+      <input
+        type="checkbox"
+        name="sms_consent"
+        id="smsConsent"
+        value="yes"
+      >
+
+      <span>
+        <strong>SMS communications (optional).</strong>
+        By checking this box, I agree to receive recurring informational
+        and marketing text messages from Área Co. Real Estate Associates
+        at the mobile number provided, which may include messages sent
+        using automated technology. Message frequency varies. Message and
+        data rates may apply. Reply STOP to opt out or HELP for help.
+        Consent is not required to purchase goods or services.
+        See our
+        <a href="/privacy-policy/#sms" target="_blank">
+          SMS Messaging Terms
+        </a>
+        and
+        <a href="/privacy-policy/#privacy" target="_blank">
+          Privacy Policy
+        </a>.
+      </span>
+    </label>
+  </div>
+
+  <button
+    class="btn btn-accent consent-submit"
+    id="contactSubmit"
+    type="submit"
+    disabled
+  >
+    Send Message
+  </button>
+
+  <p
+    id="contactMessage"
+    class="form-message"
+    aria-live="polite"
+  ></p>
+</form>
       </div>
     </section>
   </main>
