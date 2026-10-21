@@ -42,14 +42,90 @@
   }
 
   const contactForm = document.querySelector('#contactForm');
-  const contactMessage = document.querySelector('#contactMessage');
-  if (contactForm && contactMessage) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      contactMessage.textContent = 'Thank you. The form is ready to connect to your preferred inbox or CRM.';
-      contactForm.reset();
-    });
+const contactMessage = document.querySelector('#contactMessage');
+
+const consultationAck =
+  document.querySelector('#consultationAck');
+
+const smsConsent =
+  document.querySelector('#smsConsent');
+
+const contactSubmit =
+  document.querySelector('#contactSubmit');
+
+const contactPhone =
+  document.querySelector('#contactPhone');
+
+const consentTimestamp =
+  document.querySelector('#consentTimestamp');
+
+
+function updateContactConsent() {
+
+  if (!consultationAck || !contactSubmit) {
+    return;
   }
+
+  contactSubmit.disabled = !consultationAck.checked;
+}
+
+
+function updateSmsPhoneRequirement() {
+
+  if (!smsConsent || !contactPhone) {
+    return;
+  }
+
+  /*
+   * Phone is required only when the consumer
+   * specifically elects to receive SMS.
+   */
+  contactPhone.required = smsConsent.checked;
+
+  if (!smsConsent.checked) {
+    contactPhone.setCustomValidity('');
+  }
+}
+
+
+if (consultationAck) {
+
+  consultationAck.addEventListener(
+    'change',
+    updateContactConsent
+  );
+
+}
+
+
+if (smsConsent) {
+
+  smsConsent.addEventListener(
+    'change',
+    updateSmsPhoneRequirement
+  );
+
+}
+
+
+if (contactForm) {
+
+  contactForm.addEventListener('submit', function () {
+
+    if (consentTimestamp) {
+      consentTimestamp.value =
+        new Date().toISOString();
+    }
+
+  });
+
+}
+
+
+/* Initialize form state */
+
+updateContactConsent();
+updateSmsPhoneRequirement();
 
   const year = document.querySelector('#year');
   if (year) year.textContent = new Date().getFullYear();
