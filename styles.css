@@ -834,3 +834,20 @@ cite{display:block;font-size:.8rem;color:var(--muted);margin-top:16px;font-style
   cursor: pointer;
   opacity: 1;
 }
+.footer-policy-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:8px;
+}
+
+.footer-policy-links a{
+  color:#6f7278;
+  font-size:.75rem;
+  text-decoration:none;
+}
+
+.footer-policy-links a:hover{
+  color:#b0148e;
+  text-decoration:underline;
+}
