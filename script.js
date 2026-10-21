@@ -109,16 +109,65 @@ if (smsConsent) {
 
 
 if (contactForm) {
-
-  contactForm.addEventListener('submit', function () {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
 
     if (consentTimestamp) {
-      consentTimestamp.value =
-        new Date().toISOString();
+      consentTimestamp.value = new Date().toISOString();
     }
 
-  });
+    if (contactSubmit) {
+      contactSubmit.disabled = true;
+      contactSubmit.textContent = 'Sending...';
+    }
 
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams(formData).toString()
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
+      if (contactMessage) {
+        contactMessage.textContent =
+          'Thank you! Your message has been sent successfully. We will contact you shortly.';
+
+        contactMessage.classList.add('success-message');
+      }
+
+      contactForm.reset();
+
+      updateContactConsent();
+      updateSmsPhoneRequirement();
+
+    } catch (error) {
+
+      if (contactMessage) {
+        contactMessage.textContent =
+          'We were unable to send your message. Please try again or call us at 786-863-3549.';
+
+        contactMessage.classList.remove('success-message');
+      }
+
+    } finally {
+
+      if (contactSubmit) {
+        contactSubmit.textContent = 'Send Message';
+
+        if (consultationAck) {
+          contactSubmit.disabled = !consultationAck.checked;
+        }
+      }
+    }
+  });
 }
 
 
