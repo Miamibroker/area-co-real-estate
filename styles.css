@@ -780,3 +780,57 @@ cite{display:block;font-size:.8rem;color:var(--muted);margin-top:16px;font-style
     display:none !important;
   }
 }
+/* Area Co inquiry + SMS consent */
+
+.consent-row {
+  grid-column: 1 / -1;
+  margin-top: 2px;
+}
+
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #5f626a;
+}
+
+.consent-label input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  margin-top: 3px;
+  accent-color: #b0148e;
+}
+
+.consent-label strong {
+  color: #222;
+}
+
+.consent-label a {
+  color: #9b238e;
+  text-decoration: underline;
+}
+
+.consent-submit:disabled {
+  background: #c8c8cc !important;
+  color: #ffffff !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.consent-submit:not(:disabled) {
+  background: linear-gradient(
+    135deg,
+    #b0148e,
+    #6d2b82
+  ) !important;
+
+  color: #ffffff !important;
+  cursor: pointer;
+  opacity: 1;
+}
