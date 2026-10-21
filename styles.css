@@ -851,3 +851,8 @@ cite{display:block;font-size:.8rem;color:var(--muted);margin-top:16px;font-style
   color:#b0148e;
   text-decoration:underline;
 }
+.success-message {
+  color: #17833d !important;
+  font-weight: 700;
+  margin-top: 10px;
+}
